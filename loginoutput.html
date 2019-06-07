@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>output </title>
+        <style>
+        .h1{
+            text-shadow: 2px 2px 5px red;
+        }
+        </style>
+    <link rel="stylesheet" type="text/css" href="particlecss.css">
+
+    </head>
+    <body >
+
+    <div id="particles-js">
+        <div class="h1">
+        <center>
+            <h1>            Thankyou for login</h1>
+ 
+        </center>
+        </div>
+        <br>
+        <center>
+        <script>
+            function getParams(){
+                var idx = document.URL.indexOf('?');
+                var params = new Array();
+                if (idx != -1) {
+                    var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+                    for (var i=0; i<pairs.length; i++){
+                        nameVal = pairs[i].split('=');
+                        params[nameVal[0]] = nameVal[1];
+                    }
+                }
+                return params;
+            }
+            params = getParams();
+            Email = unescape(params["EmailId"]);
+            document.write("Username= " +   Username + "<br>");
+            document.write("Email Id = " + Email + "<br>");
+        </script>
+        </center>
+    </div>
+
+    <script type="text/javascript" src="particles.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="particles.js"></script>
+    </body>
+</html>
